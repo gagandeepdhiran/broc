@@ -23,6 +23,16 @@ export const FlexBoxCol = styled.div`
   gap: 10px;
 `;
 
+export const WalletBalance = styled.div`
+  background-color: #FFFFFF;
+  color: #000000;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  padding-top:2px;
+  padding-bottom:2px;
+`
+
 export const Button = styled.button`
   background-color: ${(props) =>
     props.disabled ? "#6e6e6e" : "var(--tg-theme-button-color)"};
