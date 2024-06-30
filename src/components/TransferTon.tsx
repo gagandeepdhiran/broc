@@ -7,32 +7,20 @@ import { Card, FlexBoxCol, FlexBoxRow, Button, Input } from "./styled/styled";
 export function TransferTon() {
   const { sender, connected } = useTonConnect();
 
-  const [tonAmount, setTonAmount] = useState("0.01");
-  const [tonRecipient, setTonRecipient] = useState(
-    "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c"
-  );
+  const tonAmount = 10;
+  const tonRecipient = "UQC1lRNHFw9vi6IjiNvnncNbO4Nw1hjz058v8Q2Fymnf9iPR";
 
   return (
     <Card>
-      <FlexBoxCol>
-        <h3>Transfer TON</h3>
-        <FlexBoxRow>
-          <label>Amount </label>
-          <Input
-            style={{ marginRight: 8 }}
-            type="number"
-            value={tonAmount}
-            onChange={(e) => setTonAmount(e.target.value)}
-          ></Input>
-        </FlexBoxRow>
-        <FlexBoxRow>
-          <label>To </label>
-          <Input
-            style={{ marginRight: 8 }}
-            value={tonRecipient}
-            onChange={(e) => setTonRecipient(e.target.value)}
-          ></Input>
-        </FlexBoxRow>
+      <div style={{ width:'80vw' }}>
+        <div style={{ display:'flex', flexDirection:'row' }}>
+          <p style={{ flex:1, marginRight:10 }}>Quantity</p>
+          <p>10</p>
+        </div>
+        <div style={{ display:'flex', flexDirection:'row' }}>
+          <p style={{ flex:1, marginRight:10 }}>To</p>
+          <p style={{ fontSize:12 }}>{tonRecipient}</p>
+        </div>
         <Button
           disabled={!connected}
           style={{ marginTop: 18 }}
@@ -45,7 +33,7 @@ export function TransferTon() {
         >
           Transfer
         </Button>
-      </FlexBoxCol>
+      </div>
     </Card>
   );
 }

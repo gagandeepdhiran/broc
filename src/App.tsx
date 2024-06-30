@@ -24,21 +24,25 @@ const AppContainer = styled.div`
 `;
 
 function App() {
-  const { network } = useTonConnect();
+  const { network, connected } = useTonConnect();
   const { value } = useCounterContract();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <StyledApp>
       <AppContainer>
-        {!isAuthenticated ? 
+        {!connected ? 
           <div style={{ minHeight:'100vh', display:'flex', flexDirection:'column', flex:1, alignItems:'center', justifyContent:'center' }}>
             <p style={{ color:'#DDDDDD', fontSize:56, fontWeight:'bolder' }}>GIZA</p>
             <TonConnectButton />
           </div>
           :
-          <div>
-            <p>Logged in View Here</p>
+          <div style={{ minHeight:'100vh', display:'flex', flexDirection:'column', flex:1, alignItems: 'center', justifyContent:'center' }}>
+            <p style={{ color:'#DDDDDD', fontSize:56, fontWeight:'bolder' }}>GIZA</p>
+            <div style={{ alignItems:'center' }}>
+              Transfer 10 TON to begin
+              <TransferTon />
+            </div>
           </div>
         }
         {/* <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }}>
