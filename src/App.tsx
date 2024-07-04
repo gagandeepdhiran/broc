@@ -10,6 +10,8 @@ import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
 import { useCounterContract } from "./hooks/useCounterContract";
 import { useState } from "react";
+import { Login } from "./components/Login";
+import { Dashboard } from "./components/Dashboard";
 
 const StyledApp = styled.div`
   background: rgb(2,0,36);
@@ -32,18 +34,9 @@ function App() {
     <StyledApp>
       <AppContainer>
         {!connected ? 
-          <div style={{ minHeight:'100vh', display:'flex', flexDirection:'column', flex:1, alignItems:'center', justifyContent:'center' }}>
-            <p style={{ color:'#DDDDDD', fontSize:56, fontWeight:'bolder' }}>GIZA</p>
-            <TonConnectButton />
-          </div>
+          <Login />
           :
-          <div style={{ minHeight:'100vh', display:'flex', flexDirection:'column', flex:1, alignItems: 'center', justifyContent:'center' }}>
-            <p style={{ color:'#DDDDDD', fontSize:56, fontWeight:'bolder' }}>GIZA</p>
-            <div style={{ alignItems:'center' }}>
-              Transfer 10 TON to begin
-              <TransferTon />
-            </div>
-          </div>
+          <Dashboard />
         }
         {/* <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }}>
           <img src="../public/logo.png" height={70} />
