@@ -17,7 +17,7 @@ export function TransferTon() {
       <div style={{ marginTop:20, paddingTop:10, paddingBottom:10, backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: 15, display: 'flex', flexDirection: 'column', width: '80vw', justifyContent: 'center' }}>
         <div style={{ display:'flex', flexDirection:'row' }}>
           <div>
-            <Lottie animationData={paymentAnimation} loop={false} style={{ height:120 }}/>
+            {/* <Lottie animationData={paymentAnimation} loop={false} style={{ height:120 }}/> */}
           </div>
           <div style={{ flex:1 }}>
             <div style={{ display:'flex', flexDirection:'row', marginTop:10, paddingBottom:10, borderBottom:'1px solid #777777' }}>
