@@ -15,25 +15,18 @@ export function TransferTon() {
   return (
     <>
       <div style={{ marginTop:20, paddingTop:10, paddingBottom:10, backgroundColor: 'rgba(255,255,255,0.5)', borderRadius: 15, display: 'flex', flexDirection: 'column', width: '80vw', justifyContent: 'center' }}>
-        <div style={{ display:'flex', flexDirection:'row' }}>
-          <div>
-            {/* <Lottie animationData={paymentAnimation} loop={false} style={{ height:120 }}/> */}
+        <div style={{ display:'flex', flexDirection:'row', marginLeft:20, marginTop:10, paddingBottom:10, borderBottom:'1px solid #777777' }}>
+          <div style={{ border:'1px solid #777777', height:40, width:40, borderRadius:20 }}></div>
+          <div style={{ marginLeft:5, alignItems:'center' }}>
+            <p style={{ lineHeight:0, fontWeight:'normal', fontSize:16, color:'#111111' }}>Gagandeep Singh</p>
+            <p style={{ lineHeight:0.5, fontWeight:'lighter', fontSize:13, color:'#333333' }}>Available: 204.65 TON</p>
           </div>
-          <div style={{ flex:1 }}>
-            <div style={{ display:'flex', flexDirection:'row', marginTop:10, paddingBottom:10, borderBottom:'1px solid #777777' }}>
-              <div style={{ border:'1px solid #777777', height:40, width:40, borderRadius:20 }}></div>
-              <div style={{ marginLeft:5, alignItems:'center' }}>
-                <p style={{ lineHeight:0, fontWeight:'normal', fontSize:16, color:'#111111' }}>Gagandeep Singh</p>
-                <p style={{ lineHeight:0.5, fontWeight:'lighter', fontSize:13, color:'#333333' }}>Available: 204.65 TON</p>
-              </div>
-            </div>
-            <div style={{ display:'flex', flexDirection:'row', marginTop:10 }}>
-              <div style={{ border:'1px solid #777777', height:40, width:40, borderRadius:20 }}></div>
-              <div style={{ marginLeft:5, alignItems:'center' }}>
-                <p style={{ lineHeight:0, fontWeight:'normal', fontSize:16, color:'#111111' }}>GIZA</p>
-                <p style={{ lineHeight:0.5, fontWeight:'lighter', fontSize:13, color:'#333333' }}>@GizaAppBot</p>
-              </div>
-            </div>
+        </div>
+        <div style={{ display:'flex', flexDirection:'row', marginLeft:20, marginTop:10 }}>
+          <div style={{ border:'1px solid #777777', height:40, width:40, borderRadius:20 }}></div>
+          <div style={{ marginLeft:5, alignItems:'center' }}>
+            <p style={{ lineHeight:0, fontWeight:'normal', fontSize:16, color:'#111111' }}>GIZA</p>
+            <p style={{ lineHeight:0.5, fontWeight:'lighter', fontSize:13, color:'#333333' }}>@GizaAppBot</p>
           </div>
         </div>
       </div>
@@ -45,7 +38,7 @@ export function TransferTon() {
         <div style={{ display:'flex', justifyContent:'center' }}>
           <Button
             disabled={!connected}
-            style={{ marginTop: 30 }}
+            style={{ marginTop: 30, fontSize:20 }}
             onClick={async () => {
               sender.send({
                 to: Address.parse(recipientDetails?.address),
